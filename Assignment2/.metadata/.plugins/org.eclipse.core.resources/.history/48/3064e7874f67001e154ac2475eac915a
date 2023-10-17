@@ -1,0 +1,11 @@
+package tester;
+import com.app.geometry.Point2D;
+
+public class TestPoint {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

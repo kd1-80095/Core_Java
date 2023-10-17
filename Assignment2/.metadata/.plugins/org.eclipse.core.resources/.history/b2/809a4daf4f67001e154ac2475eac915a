@@ -1,0 +1,13 @@
+package tester;
+import com.app.geometry.Point2D;
+import java.util.Scanner;
+
+public class TestPoint {
+
+	public static void main(String[] args) {
+		
+		Point2D p1 =new Point2D(10,20);
+        p1.getDeatils();
+	}
+
+}
