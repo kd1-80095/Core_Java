@@ -1,0 +1,52 @@
+/*
+ Create an application that calculates your daily driving cost, so that you can estimate how much
+money could be saved by car pooling, which also has other advantages such as reducing carbon
+emissions and reducing traffic congestion. The application should input the following information
+and display the user’s cost per day of driving to work:
+a) Total miles driven per day.
+b) Cost per gallon of gasoline.
+c) Average miles per gallon.
+d) Parking fees per day.
+e) Tolls per day.
+ */
+package car;
+import java.util.Scanner;
+
+class drivingDetails
+{
+	private double miles;
+	private double cost;
+	private double average_miles;
+	private double parking_fee;
+	private double toll;
+
+	
+	public drivingDetails() {
+		this.miles = 0;
+		this.cost = 0;
+		this.average_miles = 0;
+		this.parking_fee = 0;
+		this.toll =0;	
+	}
+
+
+	public drivingDetails(double miles, double cost, double average_miles, double parking_fee, double toll) {
+		this.miles = miles;
+		this.cost = cost;
+		this.average_miles = average_miles;
+		this.parking_fee = parking_fee;
+		this.toll = toll;
+	}
+	
+	
+};
+	
+	
+public class Driving {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

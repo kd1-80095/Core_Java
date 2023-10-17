@@ -1,0 +1,45 @@
+package tester;
+import com.app.geometry.Point2D;
+import java.util.*;
+public class TestPointArray1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of points to enter:");
+		int point = sc.nextInt();
+		
+		Point2D []points=new Point2D[point];
+		for(int i=0;i<point;i++)
+		{
+			points[i]=new Point2D();
+			points[i].acceptPoint();
+		}
+		
+		for(int i=0;i<point;i++)
+		{
+			System.out.println(points[i].getDeatils());
+		}
+
+		int choice;
+        do {
+            System.out.println("\nMenu:");
+            System.out.println("1. Display details of a specific point");
+            System.out.println("2. Display x, y coordinates of all points");
+            System.out.println("3. Display distance between  points");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            
+            switch(choice)
+            {
+            case 1:
+            {
+            	System.out.println("Enter Specific point index:");
+            	int specific_point=sc.nextInt();
+            	points[specific_point].getDeatils();
+            }
+            }
+        }while(true);
+	}
+
+}

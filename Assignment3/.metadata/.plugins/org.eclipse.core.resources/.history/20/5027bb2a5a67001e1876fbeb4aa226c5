@@ -1,0 +1,11 @@
+package tester;
+import com.app.geometry.Point2D;
+import java.util.*;
+public class TestPointArray1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+
+	}
+
+}
