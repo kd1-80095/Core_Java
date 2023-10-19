@@ -1,0 +1,6 @@
+package com.Test;
+import com.assignment.Employee;
+
+public class Box <T extends Employee>{
+
+}

@@ -1,0 +1,15 @@
+package com.Test;
+import com.assignment.*;
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Manager e1 =new Manager();
+		e1.accept();
+		e1.display();
+		e1.calcTotalSalary();
+		
+	}
+
+}
