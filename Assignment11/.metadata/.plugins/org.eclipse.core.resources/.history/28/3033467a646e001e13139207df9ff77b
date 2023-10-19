@@ -1,0 +1,13 @@
+package com.assig11_2;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+//In above assignment use LinkedHashSet instead of HashSet. 
+//If any book with duplicate isbn is added, what will happen? Books are stored in which order?

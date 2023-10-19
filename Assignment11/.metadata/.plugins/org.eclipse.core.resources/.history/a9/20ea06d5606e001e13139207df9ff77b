@@ -1,0 +1,28 @@
+package com.assig11_1;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+/*
+ 1. Store few books (hardcoded values with the Book class in previous assignment) in a HashSet and display them using iterator. If any book with duplicate
+isbn is added, what will happen? Books are stored in which order? Solve duplicate ISBN problem.
+ */
+public class Demo1 {
+
+	public static void main(String[] args) {
+		
+		Set<Book> book = new HashSet<>();
+		book.add(new Book("XJI",100.30,"Mangesh",20));
+		book.add(new Book("PLO",50.20,"Ravindra",10));
+		book.add(new Book("YTR",147.66,"Manas",15));
+		book.add(new Book("PWQ",88.90,"Suresh",3));
+		book.add(new Book("CTY",73.00,"Vishwas",44));
+		
+		Iterator<Book> itr= list.Iterator<> ();
+		//System.out.println(book.size());
+//		for(Book ele:book)
+//		System.out.println(ele);
+
+	}
+
+}

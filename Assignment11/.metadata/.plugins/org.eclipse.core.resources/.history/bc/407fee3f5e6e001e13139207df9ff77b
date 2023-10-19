@@ -1,0 +1,29 @@
+package com.assig11_1;
+
+public class Book {
+//ook details: isbn(string), price(double), authorName(string), quantity(int)
+	
+	private String isbn;
+	private double price;
+	private String authorName;
+	private int quantity;
+	
+	
+	public Book() {
+		this.isbn = "";
+		this.price = 0;
+		this.authorName = "";
+		this.quantity = 0;
+	}
+
+
+	public Book(String isbn, double price, String authorName, int quantity) {
+		
+		this.isbn = isbn;
+		this.price = price;
+		this.authorName = authorName;
+		this.quantity = quantity;
+	}
+	
+	
+}
