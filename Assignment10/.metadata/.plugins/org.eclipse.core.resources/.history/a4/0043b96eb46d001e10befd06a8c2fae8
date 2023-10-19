@@ -1,0 +1,12 @@
+package com.day12.assignment;
+
+import java.lang.reflect.Array;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		list <String> s = new Arraylist<>();
+
+	}
+
+}

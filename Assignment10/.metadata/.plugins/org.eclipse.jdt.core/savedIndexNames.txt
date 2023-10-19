@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/sunbeam/Aniket DAC/Core_Java/Assignments/Assignment10/.metadata/.plugins/org.eclipse.jdt.core
+2735506263.index
+973460205.index
+1865797976.index

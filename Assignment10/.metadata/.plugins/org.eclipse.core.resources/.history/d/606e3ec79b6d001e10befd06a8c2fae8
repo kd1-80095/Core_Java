@@ -1,0 +1,105 @@
+package com.day12.assignment;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Comparator;
+import java.util.Objects;
+
+
+public class Demo01 {
+
+static int menu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("0. Exit");
+        System.out.println("1. Add a book");
+        System.out.println("2. Display all books");
+        System.out.println("3. Delete a book at index");
+        System.out.println("4. Check if a book with a given ISBN exists");
+        System.out.println("5. Delete all books");
+        System.out.println("6. Display the number of books");
+        System.out.println("7. Sort all books by price in descending order");
+        System.out.print("Enter your choice: ");
+        return sc.nextInt();
+    }
+    public static void main(String[] args) {
+        ArrayList<Book> list = new ArrayList<Book>();
+        int choice;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            choice = menu();
+            switch (choice) {
+            case 0:
+                System.out.println("Exiting the program.");
+                break;
+               
+                case 1:
+                    Book b = new Book();
+                    b.acceptDetails();
+                    list.add(b);
+                    break;
+                case 2:
+                    for (Book book : list) {
+                        book.displayData();
+                    }
+                    break;
+                // Add cases for other menu options here
+                case 3:
+                {
+                	System.out.println("Enter index at which element to be deleted:");
+                	int index=sc.nextInt();
+                	list.remove(index);
+                }
+                break;
+                case 4:
+                {
+                	String isbn=sc.next();
+                	Book key=new Book();
+                	key.setIsbn(isbn);
+                	if(list.contains(key))
+                		System.out.println("Found");
+                	else
+                		System.out.println("not found");
+                }	
+                break;
+               
+                case 5:
+                {
+                list.clear();
+                }
+                break;
+               
+                case 6:
+                {	
+                System.out.println("Number Of Books:"+list.size());
+                }
+                break;
+               
+                case 7:
+                {	
+                class BookPriceComparator implements Comparator<Book>
+                {
+
+                	@Override
+                	public int compare(Book b1, Book b2)
+                	{
+                		int diff=-Double.compare(b1.getPrice(),b2.getPrice());
+                		return diff;
+                	}
+                }
+                BookPriceComparator comparator=new BookPriceComparator();
+                list.sort(comparator);
+                System.out.println("After Sort ");
+        		for (Book e : list)		
+        			System.out.println(e);
+                }
+                break;
+               
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                break;
+            }
+        } while (choice != 0);
+    }
+}
+
+

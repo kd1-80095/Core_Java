@@ -1,0 +1,33 @@
+package com.day12.assignment;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class CompareString implements Comparator<String>
+{
+
+	@Override
+	public int compare(String arg0, String arg1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
+
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		List <String> s = new ArrayList<>();
+		s.add("Akshaykumbhar");
+		s.add("Manas");
+		s.add("Anil");
+		s.add("Prath");
+		String max_length =Collections.max(s);
+         System.out.println(max_length);
+	}
+	
+
+}

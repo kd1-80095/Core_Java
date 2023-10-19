@@ -1,0 +1,20 @@
+package com.day12.assignment;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		List <String> s = new ArrayList<>();
+		s.add("Akshay");
+		s.add("Manas");
+		s.add("Anil");
+		s.add("Prathamesh");
+		String max_length =Collections.max(s,Comparator.comparing(String::length));
+         System.out.println(max_length);
+	}
+
+}
