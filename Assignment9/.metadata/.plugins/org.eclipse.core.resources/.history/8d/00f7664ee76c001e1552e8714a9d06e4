@@ -1,0 +1,33 @@
+package com.assignment9_2;
+import java.util.Comparator;
+
+public class Demo2 {
+
+    static <T> void selectionSort(T[] arr, Comparator<T> c) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (c.compare(arr[i], arr[j]) > 0) {
+                    T temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+       
+        Double[] doubleArray = { 3.2, 1.5, 4.8, 2.1, 5.9 };
+
+        // Define a Comparator for Double values
+        Comparator<Double> doubleComparator = Double::compare;
+
+        // Sort the array using the selectionSort method
+        selectionSort(doubleArray, doubleComparator);
+
+        // Print the sorted array
+        for (Double num : doubleArray) {
+            System.out.print(num + " ");
+        }
+    }
+}
