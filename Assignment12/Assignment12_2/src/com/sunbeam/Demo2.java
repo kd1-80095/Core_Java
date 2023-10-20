@@ -1,86 +1,37 @@
 package com.sunbeam;
-import java.util.Scanner;
+
+import java.util.function.Predicate;
+
 public class Demo2 {
-	static void calculate(double num1, double num2, Arithmetic op)
-	{
-		
-		double result = op.calc(num1, num2);
-		System.out.println("Result: "+result);
-	}
+	public static int countIf(String[] arr, Predicate<String> cond) {
+		int count = 0;
+		for(String str: arr) {
+		if(cond.test(str))
+		count++;
+		}
+		return count;
+		}
 	
-	static int menu()
-	{
-		 
-		int choice;
-		System.out.println("------------------");
-		System.out.println("Choice:");
-		System.out.println("1:Addition");
-		System.out.println("2.Substraction");
-		System.out.println("3:Multiplication");
-		System.out.println("4:Division");
-		System.out.println("Enter choice:");
+		public static void main(String[] args) {
+			String[] arr = { "Nilesh", "Shubham", "Pratik", "Omkar", "Prashant" };
+			// call countIf() to count number of strings have length more than 6 -- using anonymous inner class
+			
+		int cnt = countIf(arr, new Predicate<String>() {
+		public boolean test(String s) {
+			
+			return s.length() > 6;
+		}
+		});
 		
-		choice = new Scanner(System.in).nextInt();
-		return choice;
-	}
-
-	public static void main(String[] args) {
-		double num1,num2;
-		int choice;
-		Scanner sc = new Scanner(System.in);
+		System.out.println("Result: " + cnt); // 2
 		
-		do
-		{
-			choice=menu();
-			switch(choice)
-			{
-			case 1:  //addition
-			{
-				System.out.println("Enter Two Numbers:");
-				num1=sc.nextDouble();
-				num2=sc.nextDouble();
-	
-			System.out.println("Addition is");
-			 calculate(num1,num2,(a,b)-> (a+b));
-			}
-			break;
-			
-			case 2:
-			{
-				System.out.println("Enter Two Numbers:");
-				num1=sc.nextDouble();
-				num2=sc.nextDouble();
-
-				System.out.println("Substraction is");
-				calculate(num1,num2,(a,b) -> a-b);
-			}
-			break;
-			
-			case 3:
-			{  
-				System.out.println("Enter Two Numbers:");
-				num1=sc.nextDouble();
-				num2=sc.nextDouble();
-
-				System.out.println("Multiplication is");
-				calculate(num1,num2,(a,b) -> a*b);
-			}
-			break;
-			
-			case 4:
-			{
-				System.out.println("Enter Two Numbers:");
-				num1=sc.nextDouble();
-				num2=sc.nextDouble();
-
-				System.out.println("Division is");
-				calculate(num1,num2,(a,b) -> a/b);
-			}
-			break;
-			
-			}
-			
-		}while(choice!=0);
-	}
+		
+		// call countIf() to count number of strings have length more than 6 -- using lambda expressions
+		int total= countIf(arr,t-> t.length()>6);
+		
+		System.out.println("Total Count:"+total);
+		}
 
 }
+
+
